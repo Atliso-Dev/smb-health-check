@@ -4,7 +4,7 @@ A PowerShell script that audits SMB client posture and live connections on Windo
 
 Windows 11 24H2 requires SMB signing on all outbound connections and disables insecure guest fallback on Pro. Any NAS, Samba server or appliance that can't sign stops answering, and users see `0x80070035`, `STATUS_INVALID_SIGNATURE`, or the blocked guest access message. Most fixes floating around disable signing on the client fleet-wide. That's a security regression, not a fix. This script tells you exactly which devices and which servers are affected before you change anything.
 
-<!-- IMAGE: audit-output.png here. Audit mode flagging an unsigned connection and posture warnings. -->
+![Audit mode detecting a device that was relaxed: signing not required, guest logons enabled, bridge marker present](images/audit-output.png)
 
 ## What it does
 
